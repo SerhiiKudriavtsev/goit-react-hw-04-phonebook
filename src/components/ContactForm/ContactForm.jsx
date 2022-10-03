@@ -1,7 +1,6 @@
 import  { useState } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {Form, Div, Label, TitleForm, Input, Button} from './ContactForm.styled';
-// import { useState } from 'react';
 
 export default function ContactForm({onSubmitForm}) {
   const [name, setName] = useState('');
@@ -71,6 +70,9 @@ export default function ContactForm({onSubmitForm}) {
   )
 }
 
+ContactForm.propTypes = {
+  onSubmitForm: PropTypes.func.isRequired,
+}
 
 // class ContactForm extends Component { 
 //   state = { 
